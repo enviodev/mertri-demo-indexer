@@ -1,0 +1,45 @@
+name: metri
+networks:
+- id: 100
+  start_block: 0
+  end_block: null
+  contracts:
+  - name: GnosisSafeL2
+    address:
+    - 0xeda046C9f8fd29636Bb621892718B9754F244b97
+    handler: src/EventHandlers.ts
+    events:
+    - event: AddedOwner(address owner)
+    - event: ApproveHash(bytes32 indexed approvedHash, address indexed owner)
+    - event: ChangedFallbackHandler(address handler)
+    - event: ChangedGuard(address guard)
+    - event: ChangedThreshold(uint256 threshold)
+    - event: ExecutionFailure(bytes32 txHash, uint256 payment)
+    - event: ExecutionSuccess(bytes32 txHash, uint256 payment)
+    - event: RemovedOwner(address owner)
+    - event: SafeMultiSigTransaction(address to, uint256 value, bytes data, uint8 operation, uint256 safeTxGas, uint256 baseGas, uint256 gasPrice, address gasToken, address refundReceiver, bytes signatures, bytes additionalInfo)
+    - event: SafeReceived(address indexed sender, uint256 value)
+    - event: SafeSetup(address indexed initiator, address[] owners, uint256 threshold, address initializer, address fallbackHandler)
+    - event: SignMsg(bytes32 indexed msgHash)
+  - name: Hub
+    address:
+    - 0x29b9a7fBb8995b2423a71cC17cf9810798F6C543
+    handler: src/EventHandlers.ts
+    events:
+    - event: HubTransfer(address indexed from, address indexed to, uint256 amount)
+    - event: OrganizationSignup(address indexed organization)
+    - event: Signup(address indexed user, address token)
+    - event: Trust(address indexed canSendTo, address indexed user, uint256 limit)
+  - name: GnosisSafe
+    address:
+    - 0x2CB0ebc503dE87CFD8f0eCEED8197bF7850184ae
+    handler: src/EventHandlers.ts
+    events:
+    - event: AddedOwner(address owner)
+    - event: ApproveHash(bytes32 indexed approvedHash, address indexed owner)
+    - event: ChangedMasterCopy(address masterCopy)
+    - event: ChangedThreshold(uint256 threshold)
+    - event: ExecutionFailure(bytes32 txHash, uint256 payment)
+    - event: ExecutionSuccess(bytes32 txHash, uint256 payment)
+    - event: RemovedOwner(address owner)
+    - event: SignMsg(bytes32 indexed msgHash)

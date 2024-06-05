@@ -1,0 +1,221 @@
+type EventsSummary {
+  id: ID!
+  gnosisSafe_AddedOwner: [GnosisSafe_AddedOwner!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafe_AddedOwnerCount: BigInt!
+  gnosisSafe_ApproveHash: [GnosisSafe_ApproveHash!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafe_ApproveHashCount: BigInt!
+  gnosisSafe_ChangedMasterCopy: [GnosisSafe_ChangedMasterCopy!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafe_ChangedMasterCopyCount: BigInt!
+  gnosisSafe_ChangedThreshold: [GnosisSafe_ChangedThreshold!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafe_ChangedThresholdCount: BigInt!
+  gnosisSafe_ExecutionFailure: [GnosisSafe_ExecutionFailure!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafe_ExecutionFailureCount: BigInt!
+  gnosisSafe_ExecutionSuccess: [GnosisSafe_ExecutionSuccess!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafe_ExecutionSuccessCount: BigInt!
+  gnosisSafe_RemovedOwner: [GnosisSafe_RemovedOwner!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafe_RemovedOwnerCount: BigInt!
+  gnosisSafe_SignMsg: [GnosisSafe_SignMsg!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafe_SignMsgCount: BigInt!
+  gnosisSafeL2_AddedOwner: [GnosisSafeL2_AddedOwner!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafeL2_AddedOwnerCount: BigInt!
+  gnosisSafeL2_ApproveHash: [GnosisSafeL2_ApproveHash!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafeL2_ApproveHashCount: BigInt!
+  gnosisSafeL2_ChangedFallbackHandler: [GnosisSafeL2_ChangedFallbackHandler!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafeL2_ChangedFallbackHandlerCount: BigInt!
+  gnosisSafeL2_ChangedGuard: [GnosisSafeL2_ChangedGuard!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafeL2_ChangedGuardCount: BigInt!
+  gnosisSafeL2_ChangedThreshold: [GnosisSafeL2_ChangedThreshold!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafeL2_ChangedThresholdCount: BigInt!
+  gnosisSafeL2_ExecutionFailure: [GnosisSafeL2_ExecutionFailure!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafeL2_ExecutionFailureCount: BigInt!
+  gnosisSafeL2_ExecutionSuccess: [GnosisSafeL2_ExecutionSuccess!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafeL2_ExecutionSuccessCount: BigInt!
+  gnosisSafeL2_RemovedOwner: [GnosisSafeL2_RemovedOwner!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafeL2_RemovedOwnerCount: BigInt!
+  gnosisSafeL2_SafeMultiSigTransaction: [GnosisSafeL2_SafeMultiSigTransaction!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafeL2_SafeMultiSigTransactionCount: BigInt!
+  gnosisSafeL2_SafeReceived: [GnosisSafeL2_SafeReceived!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafeL2_SafeReceivedCount: BigInt!
+  gnosisSafeL2_SafeSetup: [GnosisSafeL2_SafeSetup!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafeL2_SafeSetupCount: BigInt!
+  gnosisSafeL2_SignMsg: [GnosisSafeL2_SignMsg!]! @derivedFrom(field: "eventsSummary")
+  gnosisSafeL2_SignMsgCount: BigInt!
+  hub_HubTransfer: [Hub_HubTransfer!]! @derivedFrom(field: "eventsSummary")
+  hub_HubTransferCount: BigInt!
+  hub_OrganizationSignup: [Hub_OrganizationSignup!]! @derivedFrom(field: "eventsSummary")
+  hub_OrganizationSignupCount: BigInt!
+  hub_Signup: [Hub_Signup!]! @derivedFrom(field: "eventsSummary")
+  hub_SignupCount: BigInt!
+  hub_Trust: [Hub_Trust!]! @derivedFrom(field: "eventsSummary")
+  hub_TrustCount: BigInt!
+}
+
+type GnosisSafe_AddedOwner {
+  id: ID!
+  owner: String!
+  eventsSummary: String!
+}
+
+type GnosisSafe_ApproveHash {
+  id: ID!
+  approvedHash: String!
+  owner: String!
+  eventsSummary: String!
+}
+
+type GnosisSafe_ChangedMasterCopy {
+  id: ID!
+  masterCopy: String!
+  eventsSummary: String!
+}
+
+type GnosisSafe_ChangedThreshold {
+  id: ID!
+  threshold: BigInt!
+  eventsSummary: String!
+}
+
+type GnosisSafe_ExecutionFailure {
+  id: ID!
+  txHash: String!
+  payment: BigInt!
+  eventsSummary: String!
+}
+
+type GnosisSafe_ExecutionSuccess {
+  id: ID!
+  txHash: String!
+  payment: BigInt!
+  eventsSummary: String!
+}
+
+type GnosisSafe_RemovedOwner {
+  id: ID!
+  owner: String!
+  eventsSummary: String!
+}
+
+type GnosisSafe_SignMsg {
+  id: ID!
+  msgHash: String!
+  eventsSummary: String!
+}
+
+type GnosisSafeL2_AddedOwner {
+  id: ID!
+  owner: String!
+  eventsSummary: String!
+}
+
+type GnosisSafeL2_ApproveHash {
+  id: ID!
+  approvedHash: String!
+  owner: String!
+  eventsSummary: String!
+}
+
+type GnosisSafeL2_ChangedFallbackHandler {
+  id: ID!
+  handler: String!
+  eventsSummary: String!
+}
+
+type GnosisSafeL2_ChangedGuard {
+  id: ID!
+  guard: String!
+  eventsSummary: String!
+}
+
+type GnosisSafeL2_ChangedThreshold {
+  id: ID!
+  threshold: BigInt!
+  eventsSummary: String!
+}
+
+type GnosisSafeL2_ExecutionFailure {
+  id: ID!
+  txHash: String!
+  payment: BigInt!
+  eventsSummary: String!
+}
+
+type GnosisSafeL2_ExecutionSuccess {
+  id: ID!
+  txHash: String!
+  payment: BigInt!
+  eventsSummary: String!
+}
+
+type GnosisSafeL2_RemovedOwner {
+  id: ID!
+  owner: String!
+  eventsSummary: String!
+}
+
+type GnosisSafeL2_SafeMultiSigTransaction {
+  id: ID!
+  to: String!
+  value: BigInt!
+  data: String!
+  operation: BigInt!
+  safeTxGas: BigInt!
+  baseGas: BigInt!
+  gasPrice: BigInt!
+  gasToken: String!
+  refundReceiver: String!
+  signatures: String!
+  additionalInfo: String!
+  eventsSummary: String!
+}
+
+type GnosisSafeL2_SafeReceived {
+  id: ID!
+  sender: String!
+  value: BigInt!
+  eventsSummary: String!
+}
+
+type GnosisSafeL2_SafeSetup {
+  id: ID!
+  initiator: String!
+  owners: [String!]!
+  threshold: BigInt!
+  initializer: String!
+  fallbackHandler: String!
+  eventsSummary: String!
+}
+
+type GnosisSafeL2_SignMsg {
+  id: ID!
+  msgHash: String!
+  eventsSummary: String!
+}
+
+type Hub_HubTransfer {
+  id: ID!
+  from: String!
+  to: String!
+  amount: BigInt!
+  eventsSummary: String!
+}
+
+type Hub_OrganizationSignup {
+  id: ID!
+  organization: String!
+  eventsSummary: String!
+}
+
+type Hub_Signup {
+  id: ID!
+  user: String!
+  token: String!
+  eventsSummary: String!
+}
+
+type Hub_Trust {
+  id: ID!
+  canSendTo: String!
+  user: String!
+  limit: BigInt!
+  eventsSummary: String!
+}
